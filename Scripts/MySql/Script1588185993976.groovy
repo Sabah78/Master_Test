@@ -15,21 +15,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('https://www.facebook.com/')
+WebUI.openBrowser('abodeqa.com')
 
-not_run: WebUI.delay(2)
+WebUI.delay(2)
 
-not_run: WebUI.click(findTestObject('Test/td_email'))
-
-not_run: WebUI.setText(findTestObject('Test/Input_email'), 'pathansabah7860@gmail.com')
-
-not_run: WebUI.delay(2)
-
-not_run: WebUI.click(findTestObject('Test/td_pwd'))
-
-not_run: WebUI.setText(findTestObject('Test/input_pwd'), '')
-
-not_run: WebUI.delay(2)
-
-not_run: WebUI.click(findTestObject('Test/btn_login'))
+CustomKeywords.'mysql.slqconnection.connection'('jdbc:mysql://localhost:3308/customer?serverTimezone=UTC', 'root', '', 'com.mysql.jdbc.Driver')
 
